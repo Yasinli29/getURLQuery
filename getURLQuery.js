@@ -1,5 +1,5 @@
-function getURLQuery() {
-  let query = window.location.search.substr(1);
+function getURLQuery(url) {
+  let query = url ? url.split('?')[1] : window.location.toString().split('?')[1]
   let queryObj = {}
   if (query) {
     let arr = query.split('&');
